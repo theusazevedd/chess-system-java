@@ -36,8 +36,19 @@ public class UI {
 
 	// https://stackoverflow.com/questions/2979383/java-clear-the-console
 	public static void clearScreen() {
-		System.out.print("\033[H\033[2J");
-		System.out.flush();
+		try {
+			if (System.getProperty("os.name").contains("Windows")) {
+				new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+			} else {
+				System.out.print("\033[H\033[2J");
+				System.out.flush();
+			}
+		} catch (Exception e) {
+			// Fallback: print many newlines
+			for (int i = 0; i < 50; i++) {
+				System.out.println();
+			}
+		}
 	}
 
 	public static ChessPosition readChessPosition(Scanner sc) {
