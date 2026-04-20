@@ -1,69 +1,95 @@
-# Chess System Java
+# ♟️ Chess System Java
 
-Um sistema de jogo de xadrez implementado em Java, utilizando módulos Java (Java 9+). Este projeto permite jogar xadrez no console, com regras completas incluindo xeque, xeque-mate, promoção de peões e movimentos especiais.
+Sistema completo de jogo de xadrez desenvolvido em Java, com foco em programação orientada a objetos e boas práticas de modelagem.
 
-## Funcionalidades
+O projeto roda em ambiente de console e implementa todas as regras oficiais do xadrez, incluindo movimentos especiais e controle de estado da partida.
 
-- **Jogo Completo de Xadrez**: Implementa todas as regras padrão do xadrez.
-- **Interface de Console**: Exibe o tabuleiro, peças capturadas e status do jogo.
-- **Movimentos Especiais**: Roque, en passant e promoção de peões.
-- **Detecção de Xeque e Xeque-Mate**: O jogo detecta e anuncia xeque e xeque-mate.
-- **Peças Coloridas**: Usa códigos ANSI para colorir as peças (brancas em branco, pretas em amarelo).
-- **Limpeza de Tela**: Limpa a tela automaticamente entre turnos (compatível com Windows e Unix).
+---
 
-## Pré-requisitos
+## 🚀 Funcionalidades
 
-- **Java 17 ou superior**: O projeto utiliza módulos Java, então é necessário JDK 9+.
-- **Sistema Operacional**: Compatível com Windows, Linux e macOS.
+- ✔️ Jogo completo de xadrez no terminal
+- ✔️ Validação de movimentos
+- ✔️ Detecção de xeque e xeque-mate
+- ✔️ Movimentos especiais:
+  - Roque
+  - En passant
+  - Promoção de peões
+- ✔️ Controle de turnos
+- ✔️ Interface com cores (ANSI)
+- ✔️ Exibição de peças capturadas
 
-## Como Executar
+---
 
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/seu-usuario/chess-system-java.git
-   cd chess-system-java
-   ```
+## 🧠 Conceitos aplicados
 
-2. **Compile o projeto**:
-   - No Windows, execute `chess-project\compile.bat`
-   - Ou manualmente:
-     ```bash
-     cd chess-project
-     javac -d bin src\module-info.java src\**\*.java
-     ```
+Este projeto demonstra na prática:
 
-3. **Execute o jogo**:
-   - No Windows, execute `chess-project\run.bat`
-   - Ou manualmente:
-     ```bash
-     cd chess-project
-     java --module-path bin -m chess_system/application.Program
-     ```
+- Programação Orientada a Objetos (POO)
+- Encapsulamento
+- Herança e Polimorfismo
+- Tratamento de exceções
+- Separação de responsabilidades
+- Modelagem de domínio
 
-## Como Jogar
+---
 
-- O jogo alterna entre jogadores brancos e pretos.
-- Digite a posição de origem (ex: `e2`) e pressione Enter.
-- O tabuleiro mostrará os movimentos possíveis em azul.
-- Digite a posição de destino (ex: `e4`) e pressione Enter.
-- Para parar o jogo, feche o terminal ou pressione Ctrl+C.
+## ⚙️ Tecnologias
 
-## Estrutura do Projeto
+- Java 17+
+- Estrutura modular (Java Modules)
+- Execução via terminal
 
-- `src/module-info.java`: Define o módulo Java.
-- `src/application/`: Contém a classe principal `Program.java` e a interface `UI.java`.
-- `src/boardgame/`: Classes base para jogos de tabuleiro.
-- `src/chess/`: Lógica específica do xadrez, incluindo peças e partida.
-- `bin/`: Diretório de saída da compilação (ignorado pelo Git).
+---
 
-## Contribuição
+## ▶️ Como executar
 
-Sinta-se à vontade para contribuir! Abra issues para bugs ou sugestões, e pull requests para melhorias.
+### Clone o repositório
 
-## Licença
+```bash
+git clone https://github.com/theusazevedd/chess-system-java.git
+cd chess-system-java/chess-project
+```
 
-Este projeto é de código aberto. Use e modifique conforme necessário.
+### Compilar
 
-## Autor
+```bash
+javac -d bin src\module-info.java src\**\*.java
+```
 
-Desenvolvido por [Seu Nome] - Baseado em tutoriais de Java e orientação a objetos.
+### Executar
+
+```bash
+java --module-path bin -m chess_system/application.Program
+```
+
+---
+
+## 🎮 Como jogar
+
+- Digite a posição de origem (ex: e2)
+- Digite a posição de destino (ex: e4)
+- O jogo alterna automaticamente entre os jogadores
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+src/
+ ├── application
+ ├── boardgame
+ └── chess
+```
+
+- **application** → interface e execução
+- **boardgame** → lógica genérica de tabuleiro
+- **chess** → regras específicas do xadrez
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por Matheus Azevedo
+
+🔗 https://github.com/theusazevedd
